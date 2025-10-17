@@ -1,13 +1,16 @@
 function isLeapYear(year) {
-    if (year % 4 !== 0) {
-        alert("Not leap year.");
-    }
-    
-    else if (year % 100 === 0 && year % 400 !== 0) {
-        alert("Not leap year.");
-    }
-    else {
-        alert("Leap year");
+    if (year % 4 === 0) {
+        if (year % 100 === 0) {
+            if (year % 400 === 0) {
+                return "Leap year.";
+            }else {
+                return "Not leap year."
+            }
+        }else {
+            return "Leap year."
+            }
+    }else {
+        return "Not leap year."
     }
 }
-isLeapYear(prompt("typea year"));
+isLeapYear(prompt("type a year"));
